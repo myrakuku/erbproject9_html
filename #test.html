@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幼兒及兒童課程</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts - Yusei Magic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .font-yusei {
+        font-family: 'Yusei Magic', sans-serif;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white font-yusei">
+  <div class="max-w-4xl mx-auto p-4">
+    <!-- 頂部課程分類導航 -->
+    <div class="flex justify-center -space-x-2 mb-8">
+      <div class="bg-yellow-400 text-center py-3 px-6 rounded-t-lg text-sm font-medium">
+        親子 Playgroup /<br>學前系列 課程
+      </div>
+      <div class="bg-green-400 text-center py-3 px-6 rounded-t-lg text-white text-sm font-medium">
+        幼兒及兒童課程
+      </div>
+      <div class="bg-[#c7a4a0] text-center py-3 px-6 rounded-t-lg text-sm font-medium">
+        成人課程
+      </div>
+    </div>
+
+    <!-- 主內容卡片 -->
+    <div class="border-4 border-green-400 rounded-xl p-6">
+      <!-- 課程模組標籤 -->
+      <div class="grid grid-cols-3 gap-4 mb-8">
+        <!-- 第一列 -->
+        <div class="flex flex-col gap-3">
+          <div class="bg-green-400 text-white text-center py-3 px-4 rounded-full text-sm font-medium">
+            語言發展 · 普通話
+          </div>
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            STEM 系列
+          </div>
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            舞蹈律動
+          </div>
+        </div>
+        <!-- 第二列 -->
+        <div class="flex flex-col gap-3">
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            語言發展 · 普通話
+          </div>
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            視覺感官
+          </div>
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            運動技能
+          </div>
+        </div>
+        <!-- 第三列 -->
+        <div class="flex flex-col gap-3">
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            學習效能
+          </div>
+          <div class="bg-cyan-200 text-center py-3 px-4 rounded-full text-sm font-medium">
+            音樂發展
+          </div>
+        </div>
+      </div>
+
+      <!-- 課程標題與描述 -->
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold text-green-400 mb-4">語言發展 · 普通話</h2>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          一套循序漸進的學習安排<br>
+          一套全面的學前系列<br>
+          從初生嬰兒至入小學前<br>
+          助你的子女輕輕鬆鬆預備入學....
+        </p>
+      </div>
+
+      <!-- 課程卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- 課程 1 -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <div class="text-lg font-medium mb-4">
+            3 - 5 歲<br>
+            幼兒喜洋洋普通話唱遊<br>
+            及會話班
+          </div>
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+            <!-- 小熊圖示位置，可替換成圖片 -->
+            <span class="text-3xl">🧸</span>
+          </div>
+        </div>
+        <!-- 課程 2 -->
+        <div class="bg-white shadow-md rounded-lg p-6 text-center">
+          <div class="text-lg font-medium mb-4">
+            3 - 5 歲<br>
+            幼兒普通話說故事唱遊<br>
+            班
+          </div>
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+            <!-- 小熊圖示位置，可替換成圖片 -->
+            <span class="text-3xl">🧸</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
