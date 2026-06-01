@@ -43,23 +43,49 @@
         </a>
     </div>
 
-    <!-- Login / Register -->
+    <!-- *** Here need to set condition between public account vs private account *** -->
+    <!-- Public User Top - Login / Register -->
     <div class="hidden md:flex gap-6">
         <div class="flex items-center gap-5">
-        <a href="#">
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
             <div class="flex items-center">
             <div class="w-8 h-8 bg-green-300 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-arrow-right-to-bracket text-lg text-black"></i>
             </div>
-            <span class="text-md text-gray-600 font-medium">登入</span>
+            <span class="text-md font-medium">登入</span>
             </div>
         </a>
-        <a href="#">
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
             <div class="flex items-center">
             <div class="w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-user-plus text-md text-black"></i>
             </div>
-            <span class="text-md text-gray-600 font-medium">註冊</span>
+            <span class="text-md font-medium">註冊</span>
+            </div>
+        </a>
+        </div>
+    </div>
+    <!-- Private User Top - My Course / Logout -->
+    <div class="hidden md:flex gap-6">
+        <div class="flex items-center gap-5">
+          <div class="flex items-center">
+            <i class="fa-solid fa-circle-user text-xl" style="color: rgb(30, 48, 80);"></i>
+            <span class="text-md font-medium">Student name</span>
+          </div>
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
+            <div class="flex items-center">
+            <div class="w-8 h-8 bg-[#FF7400] rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-calendar-days text-lg text-white"></i>
+            </div>
+            <span class="text-md font-medium">我的課程</span>
+            </div>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
+            <div class="flex items-center">
+            <div class="w-8 h-8 bg-[#001A77] rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-person-walking-arrow-right text-md text-white"></i>
+            </div>
+            <span class="text-md font-medium">登出</span>
             </div>
         </a>
         </div>
