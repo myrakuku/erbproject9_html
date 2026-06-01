@@ -184,7 +184,7 @@ links.forEach(link => {
   link.addEventListener('click', closeMobileMenu);
 });
 
-// 🔥 重點：視窗改變大小 → 自動關閉手機選單
+// Resize: close mobile meun when larger than 768px 
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 768) {
     closeMobileMenu();
