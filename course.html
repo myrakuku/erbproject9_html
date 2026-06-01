@@ -40,65 +40,99 @@
         </a>
     </div>
 
-    <!-- Login / Register -->
+    <!-- *** Here need to set condition between public account vs private account *** -->
+    <!-- Public User Top - Login / Register -->
     <div class="hidden md:flex gap-6">
         <div class="flex items-center gap-5">
-        <a href="#">
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
             <div class="flex items-center">
             <div class="w-8 h-8 bg-green-300 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-arrow-right-to-bracket text-lg text-black"></i>
             </div>
-            <span class="text-md text-gray-600 font-medium">登入</span>
+            <span class="text-md font-medium">登入</span>
             </div>
         </a>
-        <a href="#">
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
             <div class="flex items-center">
             <div class="w-8 h-8 bg-orange-200 rounded-full flex items-center justify-center">
                 <i class="fa-solid fa-user-plus text-md text-black"></i>
             </div>
-            <span class="text-md text-gray-600 font-medium">註冊</span>
+            <span class="text-md font-medium">註冊</span>
+            </div>
+        </a>
+        </div>
+    </div>
+    <!-- Private User Top - My Course / Logout -->
+    <div class="hidden md:flex gap-6">
+        <div class="flex items-center gap-5">
+          <div class="flex items-center">
+            <i class="fa-solid fa-circle-user text-xl" style="color: rgb(30, 48, 80);"></i>
+            <span class="text-md font-medium">Student name</span>
+          </div>
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
+            <div class="flex items-center">
+            <div class="w-8 h-8 bg-[#FF7400] rounded-full flex items-center justify-center">
+                <i class="fa-regular fa-calendar-days text-lg text-white"></i>
+            </div>
+            <span class="text-md font-medium">我的課程</span>
+            </div>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-blue-500 ">
+            <div class="flex items-center">
+            <div class="w-8 h-8 bg-[#001A77] rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-person-walking-arrow-right text-md text-white"></i>
+            </div>
+            <span class="text-md font-medium">登出</span>
             </div>
         </a>
         </div>
     </div>
 
-    <!-- 手機漢堡按鈕 -->
+    <!-- Hambugar menu -->
     <button id="menuBtn" class="md:hidden text-2xl text-gray-600 z-50">
         <i class="fa-solid fa-bars"></i>
     </button>
 </div>
 </div>
 
-<!-- 手機選單 -->
+<!-- Mobile menu -->
 <div id="mobileMenu" 
   class="fixed inset-0 bg-white/95 z-[9998] flex flex-col items-center justify-center gap-3 text-lg hidden opacity-0 transition-opacity duration-300"
   style="background-image: url('./img/banner/mainbanner.jpg');">
 
   <a href="#" class="w-full px-10">
-    <p class="w-full py-2 px-5 bg-blue-400 text-white font-medium rounded-full hover:bg-blue-500 transition-colors text-center">首頁</p>
+    <p class="w-[200px] mx-auto py-2 px-5 bg-blue-400 text-white font-medium rounded-full hover:bg-sky-200 transition-colors text-center">首頁</p>
   </a>
   <a href="#" class="w-full px-10">
-    <p class="w-full py-2 px-5 bg-blue-400 text-white font-medium rounded-full hover:bg-blue-500 transition-colors text-center">關於我們</p>
+    <p class="w-[200px] mx-auto py-2 px-5 bg-[#FF7400] text-white font-medium rounded-full hover:bg-sky-200 transition-colors text-center">關於我們</p>
   </a>
   <a href="#" class="w-full px-10">
-    <p class="w-full py-2 px-5 bg-blue-400 text-white font-medium rounded-full hover:bg-blue-500 transition-colors text-center">最新消息</p>
+    <p class="w-[200px] mx-auto py-2 px-5 bg-[#FCD82A] text-white font-medium rounded-full hover:bg-sky-200 transition-colors text-center">最新消息</p>
   </a>
 
   <div class="flex flex-col items-center gap-4 mt-4">
-    <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-yellow-400 rounded-2xl flex flex-col items-center justify-center shadow-md">
-      <i class="fa-solid fa-baby text-4xl text-yellow-400 mb-2"></i>
-      <span class="text-gray-700 text-lg font-medium">幼嬰課程</span>
-    </button>
-    <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-green-400 rounded-2xl flex flex-col items-center justify-center shadow-md">
-      <i class="fa-solid fa-child text-4xl text-green-500 mb-2"></i>
-      <span class="text-gray-700 text-lg font-medium">兒童課程</span>
-    </button>
-    <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-pink-300 rounded-2xl flex flex-col items-center justify-center shadow-md">
-      <i class="fa-solid fa-user text-4xl text-pink-400 mb-2"></i>
-      <span class="text-gray-700 text-lg font-medium">成人課程</span>
-    </button>
+    <a href="#">
+        <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-yellow-400 rounded-2xl flex flex-col items-center justify-center shadow-md">
+        <i class="fa-solid fa-baby text-4xl text-yellow-400 mb-2"></i>
+        <span class="text-gray-700 text-lg font-medium">幼嬰課程</span>
+        </button>
+    </a>
+    <a href="#">
+        <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-[#accf56] rounded-2xl flex flex-col items-center justify-center shadow-md">
+        <i class="fa-solid fa-child-reaching text-4xl text-[#accf56] mb-2"></i>
+        <span class="text-gray-700 text-lg font-medium">兒童課程</span>
+        </button>
+    </a>
+    <a href="#">
+        <button class="w-40 py-2 bg-white hover:bg-gray-100 border-4 border-[#C7A4A0] rounded-2xl flex flex-col items-center justify-center shadow-md">
+        <i class="fa-solid fa-person text-4xl text-[#C7A4A0] mb-2"></i>
+        <span class="text-gray-700 text-lg font-medium">成人課程</span>
+        </button>
+    </a>
   </div>
 
+  <!-- *** Here need to set condition between public account vs private account *** -->
+  <!-- Public User Footer -->
   <div class="flex justify-center gap-4 mt-6 w-full px-4">
     <a href="">
       <button class="py-4 px-8 bg-green-400 text-white rounded-full flex items-center gap-3 hover:bg-green-500 transition-colors">
@@ -113,9 +147,24 @@
       </button>
     </a>
   </div>
+  <!-- Private User Footer -->
+  <div class="flex justify-center gap-4 mt-6 w-full px-4">
+    <a href="">
+      <button class="py-4 px-8 bg-[#FF7400] text-white rounded-full flex items-center gap-3 hover:bg-orange-400 transition-colors">
+        <i class="fa-solid fa-calendar text-xl"></i>
+        <span class="font-medium text-xl">我的課程</span>
+      </button>
+    </a>
+    <a href="">
+      <button class="py-4 px-8 bg-[#001A77] text-white rounded-full flex items-center gap-3 hover:bg-blue-300 transition-colors">
+        <i class="fa-solid fa-person-walking-arrow-right text-xl"></i>
+        <span class="font-medium text-xl">登出</span>
+      </button>
+    </a>
+  </div>
 </div>
 
-<!-- 手機關閉按鈕 -->
+<!-- Mobile close button -->
 <button id="closeBtn" 
   class="bg-blue-500 px-2 rounded-lg fixed top-5 right-5 text-2xl text-white z-[9999] hidden">
   <i class="fa-solid fa-xmark"></i>
@@ -139,6 +188,11 @@
     立即報名
 </button>
 
+<!-- 報名已滿 -->
+<div class="mb-6">
+    <h3 class="font-bold text-lg mb-2 text-red-500">報名已滿！ 敬請留意下一期開始時間</h3>
+</div>
+
 <!-- 課程內容 -->
 <div class="mb-6">
     <h3 class="font-bold text-lg mb-2">課程內容:</h3>
@@ -160,42 +214,53 @@
 <!-- 費用 -->
 <div class="mb-6">
     <h3 class="font-bold text-lg mb-2">費用:</h3>
-    <ul class="list-disc pl-6 space-y-1 text-gray-800">
-    <li>會員 $1480</li>
-    <li>非會員 $1640</li>
-    </ul>
+    <p class="text-gray-800">$1480</p>
 </div>
 
 <!-- 對象 -->
-<div>
+<div class="mb-6">
     <h3 class="font-bold text-lg mb-2">對象:</h3>
     <p class="text-gray-800">24-36個月幼兒</p>
+</div>
+
+<!-- 上課日期及時間 -->
+<div>
+    <h3 class="font-bold text-lg mb-2">上課日期及時間</h3>
+    <p class="text-gray-800">25/04/2026 – 13/06/2026 (12:30-13:30)</p>
+    <p class="text-gray-800">逢星期六，共8堂</p>
 </div>
 </div>
 
 <!-- 3. Pop up course application -->
 <div id="modalOverlay" class="fixed inset-0 bg-black/50 z-[999] hidden opacity-0 transition-opacity duration-300"></div>
-<div id="modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-6 w-11/12 max-w-md z-[1000] hidden opacity-0 transition-opacity duration-300">
-    <button id="closeModalBtn" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600">
-        <i class="fa-solid fa-xmark text-2xl"></i>
+<div id="modal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-xl p-8 w-11/12 max-w-md z-[1000] hidden opacity-0 transition-opacity duration-300">
+    <!-- 右上角關閉按鈕 -->
+    <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+        <i class="fa-solid fa-xmark text-3xl"></i>
     </button>
-    <p class="text-gray-800 mb-4">請選擇課程:</p>
-    <!-- 改為下拉選單 select -->
-    <select class="w-full border border-gray-300 rounded px-3 py-2 mb-4 bg-white">
-        <option selected>Little Ones自理與學前分離預備 Playgroup (Sat 12:30)</option>
-        <option>幼兒藝術體驗班 (Sun 10:00)</option>
-        <option>親子音樂律動班 (Sat 14:00)</option>
-        <option>學前適應小組 (Sun 11:30)</option>
-    </select>
-    <div class="text-gray-700 space-y-1 mb-6">
+
+    <!-- 標題 -->
+    <h2 class="text-orange-500 text-2xl font-bold mb-6">請仔細核對以下資料</h2>
+
+    <!-- 課程資訊 -->
+    <div class="text-gray-700 text-lg space-y-2 mb-8">
+        <p class="font-medium">已選擇課程:</p>
+        <p class="text-gray-900">Little Ones自理與學前分離預備 Playgroup</p>
         <p>課程編號: 26PG311-02</p>
         <p>日期: 25/04/2026 - 13/06/2026</p>
-        <p>時間: 下午12:30-下午1:30</p>
-        <p>逢星期六，共8堂</p>
+        <p>時間: 12:30-13:30</p>
+        <p class="mt-4">逢星期六，共8堂</p>
     </div>
-    <button id="confirmModalBtn" class="bg-green-400 hover:bg-green-500 text-white px-6 py-2 rounded-full flex items-center gap-2">
-        <i class="fa-solid fa-check"></i> 確定報名
-    </button>
+
+    <!-- 按鈕列 -->
+    <div class="flex justify-center gap-6">
+        <button id="confirmModalBtn" class="bg-[#b4d26e] hover:bg-green-500 text-white px-8 py-4 rounded-full text-xl font-bold flex items-center gap-3">
+            <i class="fa-solid fa-check-circle text-2xl"></i> 確定報名
+        </button>
+        <button id="cancelModalBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-8 py-4 rounded-full text-xl font-bold">
+            取消
+        </button>
+    </div>
 </div>
 
 <script>
@@ -205,42 +270,41 @@ const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-// 開啟選單
+// Open Mobile version
 menuBtn.addEventListener('click', () => {
-menuBtn.classList.add('hidden');
-mainnavbar.classList.add('hidden');
-mobileMenu.classList.remove('hidden');
-closeBtn.classList.remove('hidden'); // 顯示關閉鈕
-setTimeout(() => {
+  menuBtn.classList.add('hidden');
+  mobileMenu.classList.remove('hidden');
+  closeBtn.classList.remove('hidden');
+  setTimeout(() => {
     mobileMenu.classList.add('opacity-100');
-}, 10);
-document.body.style.overflow = 'hidden';
+  }, 10);
+  document.body.style.overflow = 'hidden';
 });
 
-// 關閉選單
-closeBtn.addEventListener('click', () => {
-mobileMenu.classList.remove('opacity-100');
-setTimeout(() => {
+// Close Mobile version
+function closeMobileMenu() {
+  mobileMenu.classList.remove('opacity-100');
+  setTimeout(() => {
     mobileMenu.classList.add('hidden');
-    mainnavbar.classList.remove('hidden');
     closeBtn.classList.add('hidden');
     menuBtn.classList.remove('hidden');
-});
-document.body.style.overflow = '';
-});
+  });
+  document.body.style.overflow = '';
+}
 
-// 點選連結自動關閉
+closeBtn.addEventListener('click', closeMobileMenu);
+
+// Close when click the button
 const links = mobileMenu.querySelectorAll('a');
 links.forEach(link => {
-link.addEventListener('click', () => {
-    mobileMenu.classList.remove('opacity-100');
-    setTimeout(() => {
-    mobileMenu.classList.add('hidden');
-    closeBtn.classList.add('hidden');
-    menuBtn.classList.remove('hidden');
-    }, 300);
-    document.body.style.overflow = '';
+  link.addEventListener('click', closeMobileMenu);
 });
+
+// Resize: close mobile meun when larger than 768px 
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    closeMobileMenu();
+  }
 });
 
 // ========= Course pop up js ==================
@@ -249,6 +313,7 @@ const openModalBtn = document.getElementById('openModalBtn');
 const modal = document.getElementById('modal');
 const closeModalBtn = document.getElementById('closeModalBtn');
 const confirmModalBtn = document.getElementById('confirmModalBtn');
+const cancelModalBtn = document.getElementById('cancelModalBtn');
 
 function openModal() {
 modalOverlay.classList.remove('hidden');
@@ -273,6 +338,7 @@ document.body.style.overflow = '';
 openModalBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
 confirmModalBtn.addEventListener('click', closeModal);
+cancelModalBtn.addEventListener('click', closeModal);
 </script>
 
 </body>
