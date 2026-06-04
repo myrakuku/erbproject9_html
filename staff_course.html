@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Template Admin</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style type="text/tailwindcss">
+@layer utilities {
+    .sidebar-shadow { box-shadow: 2px 0 8px #0000000d; }
+    .dropdown-card { box-shadow: 0 2px 10px rgba(0,0,0,0.12); z-index:9999; }
+    .row-selected { background-color: #e6f0ff; }
+}
+</style>
+</head>
+<body class="bg-white flex min-h-screen">
+
+<!-- 1. Left navbar -->
+<aside class="w-[240px] min-h-screen bg-white sidebar-shadow fixed top-0 left-0 flex flex-col justify-between py-6 px-4">
+    <!-- Logo -->
+    <div class="mb-10">
+        <img src="./img/logo/jc.png" alt="Logo" class="h-12 object-contain">
+    </div>
+
+    <!-- Left navbar coloumn -->
+    <div class="flex-1">
+        <p class="text-sm text-gray-500 mb-3 tracking-wide">GENERAL</p>
+        <nav class="flex flex-col gap-2">
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-700">
+                <i class="fa-solid fa-gauge-high w-5 text-center"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-700">
+                <i class="fa-solid fa-table-columns w-5 text-center"></i>
+                <span>Course Template</span>
+            </a>
+            <!-- active bar bg css -->
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 bg-gray-100 transition-colors text-gray-600">
+                <i class="fa-solid fa-book-open w-5 text-center"></i>
+                <span>Course</span>
+            </a>
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 transition-colors text-gray-600">
+                <i class="fa-solid fa-newspaper w-5 text-center"></i>
+                <span>NEWS</span>
+            </a>
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 transition-colors text-gray-600">
+                <i class="fa-solid fa-users w-5 text-center"></i>
+                <span>Student</span>
+            </a>
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 transition-colors text-gray-600">
+                <i class="fa-solid fa-chalkboard-user w-5 text-center"></i>
+                <span>Teacher</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Left navbar footer -->
+    <div class="mt-8">
+        <p class="text-sm mb-3">Hello, Staff A!</p>
+        <button class="border border-blue-500 rounded-lg py-2 px-3 text-blue-500 flex items-center gap-2 hover:bg-blue-50">
+            <i class="fa-solid fa-right-from-bracket"></i> Log out
+        </button>
+    </div>
+</aside>
+
+<!-- 2. Right side content -->
+<main class="ml-[240px] flex-1 p-8">
+    <h1 class="text-[2.2rem] text-gray-600 font-medium mb-8">Course</h1>
+
+    <!-- Function bar -->
+    <div class="flex flex-wrap items-center gap-3 mb-8">
+        <!-- Search bar -->
+        <div class="relative flex-grow max-w-[460px]">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            <input type="text" class="w-full pl-10 pr-4 py-2.5 rounded-full border border-gray-300 focus:outline-none">
+        </div>
+
+        <!-- Filter dropdown -->
+        <div class="relative dropdown-filter">
+            <button class="border border-gray-300 py-2.5 px-4 rounded hover:bg-gray-50 flex items-center gap-2">
+                <i class="fa-solid fa-filter"></i> Filter
+            </button>
+            <div class="hidden absolute top-full left-0 mt-1 bg-white border border-gray-300 dropdown-card min-w-[200px]">
+                <div class="py-2.5 px-3 hover:bg-gray-100 cursor-pointer">filter 1</div>
+                <div class="py-2.5 px-3 hover:bg-gray-100 cursor-pointer">filter 2</div>
+            </div>
+        </div>
+
+        <button class="border border-gray-300 py-2.5 px-4 rounded hover:bg-gray-50">Search</button>
+
+        <!-- Refresh -->
+        <button class="border border-gray-300 py-2.5 px-4 rounded hover:bg-gray-50">
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+
+        <!-- Action dropdown -->
+        <div class="relative dropdown-action">
+            <button class="border border-gray-300 py-2.5 px-2.5 rounded hover:bg-gray-50">Action</button>
+            <div class="hidden absolute top-full mt-1 bg-white border border-gray-300 dropdown-card min-w-[200px]">
+                <div class="py-2 px-5 hover:bg-gray-100 cursor-pointer">Set Publish</div>
+                <div class="py-2 px-5 hover:bg-gray-100 cursor-pointer">Redo Publish</div>
+                <div class="py-2 px-5 hover:bg-gray-100 cursor-pointer">Set Hot Course</div>
+                <div class="py-2 px-5 hover:bg-gray-100 cursor-pointer">Redo Hot Course</div>
+            </div>
+        </div>
+
+        <!-- Create -->
+        <button class="border border-gray-300 py-2.5 px-4 rounded hover:bg-gray-50 flex items-center gap-2">
+            <i class="fa-solid fa-plus"></i> Create
+        </button>
+    </div>
+
+    <!-- Fixed Table -->
+    <div class="overflow-x-auto">
+        <table class="table-fixed w-full border-collapse">
+            <thead>
+                <tr class="border-b border-gray-300">
+                    <!-- 選框 -->
+                    <th class="w-[5%] py-4 text-left"></th>
+                    <!-- Code -->
+                    <th class="w-[12%] py-4 text-left text-gray-600 font-medium">Code</th>
+                    <!-- Course Name -->
+                    <th class="w-[32%] py-4 text-left text-gray-600 font-medium">Course Name</th>
+                    <!-- Status -->
+                    <th class="w-[12%] py-4 text-left text-gray-600 font-medium">Status</th>
+                    <!-- Publish -->
+                    <th class="hidden md:table-cell w-[8%] py-4 text-left text-gray-600 font-medium">Publish</th>
+                    <!-- Fee -->
+                    <th class="hidden md:table-cell w-[11%] py-4 text-left text-gray-600 font-medium">Fee</th>
+                    <!-- Start Date -->
+                    <th class="hidden md:table-cell w-[15%] py-4 text-left text-gray-600 font-medium">Start Date</th>
+                    <!-- End Date -->
+                    <th class="hidden md:table-cell w-[15%] py-4 text-left text-gray-600 font-medium">End Date</th>
+                    <!-- More -->
+                    <th class="w-[5%] py-4 text-left text-gray-600 font-medium">More</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data 1: Pending -->
+                <tr class="border-b border-gray-200 table-row">
+                    <td class="py-5">
+                        <input type="checkbox" class="row-check w-4 h-4 rounded border-gray-300 cursor-pointer">
+                    </td>
+                    <td class="py-5 align-top">26PG311-02</td>
+                    <td class="py-5 align-top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint suscipit itaque ducimus reiciendis nulla modi inventore numquam doloribus aut sequi.</td>
+                    <td class="py-5 align-top">
+                        <span class="bg-[#fff3cd] text-gray-700 text-xs px-4 py-0.5 rounded-full inline-block">Pending</span>
+                    </td>
+                    <td class="hidden md:table-cell py-5 align-top">Y</td>
+                    <td class="hidden md:table-cell py-5 align-top">$1480</td>
+                    <td class="hidden md:table-cell py-5 align-top">25/04/2026</td>
+                    <td class="hidden md:table-cell py-5 align-top">13/06/2026</td>
+                    <!-- More -->
+                    <td class="py-5">
+                        <button class="more-btn text-gray-400 text-xl hover:text-gray-600">
+                            <div class="px-3">
+                                <i class="fa-solid fa-ellipsis-v"></i>
+                            </div>
+                        </button>
+                    </td>
+                </tr>
+                <!-- Data 2:  -->
+                <tr class="border-b border-gray-200 table-row">
+                    <td class="py-5">
+                        <input type="checkbox" class="row-check w-4 h-4 rounded border-gray-300 cursor-pointer">
+                    </td>
+                    <td class="py-5 align-top">26PG311-02</td>
+                    <td class="py-5 align-top">Little Ones 自理與學前分離預備 Playgroup</td>
+                    <td class="py-5 align-top">
+                        <span class="bg-[#fff3cd] text-gray-700 text-xs px-4 py-0.5 rounded-full inline-block">Pending</span>
+                    </td>
+                    <td class="hidden md:table-cell py-5 align-top">Y</td>
+                    <td class="hidden md:table-cell py-5 align-top">$1480</td>
+                    <td class="hidden md:table-cell py-5 align-top">25/04/2026</td>
+                    <td class="hidden md:table-cell py-5 align-top">13/06/2026</td>
+                    <!-- More -->
+                    <td class="py-5">
+                        <button class="more-btn text-gray-400 text-xl hover:text-gray-600">
+                            <div class="px-3">
+                                <i class="fa-solid fa-ellipsis-v"></i>
+                            </div>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- More dropdown -->
+    <div id="globalMoreMenu" class="hidden fixed z-[999999] left-5 bg-white border border-gray-300 shadow-lg min-w-[130px]">
+        <div class="py-2.5 px-3 hover:bg-gray-100 cursor-pointer flex items-center gap-3">
+            <i class="fa-solid fa-eye text-[#737373]"></i> View
+        </div>
+        <div class="py-2.5 px-3 hover:bg-gray-100 cursor-pointer flex items-center gap-3 border-b border-gray-200">
+            <i class="fa-solid fa-pen-to-square text-[#527bff]"></i> Edit
+        </div>
+    </div>
+</main>
+
+<script>
+// 全域選單
+const globalMoreMenu = document.getElementById('globalMoreMenu');
+
+// 關閉所有選單（Filter + Action + More）
+function closeAllMenus() {
+  // 關 More
+  globalMoreMenu.classList.add('hidden');
+  // 關 Filter & Action
+  document.querySelectorAll('.dropdown-filter > div, .dropdown-action > div').forEach(menu => {
+    menu.classList.add('hidden');
+  });
+}
+
+// ======================================
+// 1. More 三點選單
+// ======================================
+document.querySelectorAll('.more-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeAllMenus(); // 先關全部
+
+    const rect = btn.getBoundingClientRect();
+    globalMoreMenu.style.left = `${rect.left - 135}px`;
+    globalMoreMenu.style.top = `${rect.top + rect.height/2 - 10}px`;
+    globalMoreMenu.classList.remove('hidden');
+  });
+});
+
+// ======================================
+// 2. Filter & Action 選單
+// ======================================
+const dropdowns = document.querySelectorAll('.dropdown-filter, .dropdown-action');
+dropdowns.forEach(wrap => {
+  const btn = wrap.querySelector('button');
+  const menu = wrap.querySelector('div');
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = !menu.classList.contains('hidden');
+    closeAllMenus(); // 先關全部
+    if (!isOpen) menu.classList.remove('hidden');
+  });
+});
+
+// ======================================
+// 3. 點任意位置 → 全部關閉
+// ======================================
+document.addEventListener('click', () => {
+  closeAllMenus();
+});
+
+// ======================================
+// 4. 勾選行變色（不動）
+// ======================================
+document.querySelectorAll('.row-check').forEach(ck => {
+  ck.addEventListener('change', () => {
+    const tr = ck.closest('.table-row');
+    tr.classList.toggle('row-selected', ck.checked);
+  });
+});
+</script>
+</body>
+</html>
