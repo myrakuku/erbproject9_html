@@ -44,11 +44,11 @@
                 <i class="fa-solid fa-gauge-high w-5 text-center"></i>
                 <span>Dashboard</span>
             </a>
-            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-700 text-xs">
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-600 text-xs">
                 <i class="fa-solid fa-table-columns w-5 text-center"></i>
                 <span>Course Template</span>
             </a>
-            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-700 text-xs">
+            <a href="#" class="rounded-lg py-2.5 px-3 flex items-center gap-3 hover:bg-gray-100 text-gray-600 text-xs">
                 <i class="fa-solid fa-book-open w-5 text-center"></i>
                 <span>Course</span>
             </a>
@@ -80,7 +80,7 @@
 
 <!-- 主內容 -->
 <main class="md:ml-[200px] flex-1 p-8 pt-16 md:pt-8">
-    <h1 class="text-2xl text-gray-600 font-medium mb-8">Course</h1>
+    <h1 class="text-2xl text-gray-600 font-medium mb-8">News</h1>
 
     <div class="flex flex-wrap items-center gap-3 mb-8">
         <div class="relative flex-grow max-w-[460px]">
@@ -116,39 +116,33 @@
         </button>
     </div>
 
-    <!-- 手機只顯示 Course Name + More -->
+    <!-- 手機只顯示 Title + edit -->
     <div class="overflow-x-auto">
         <table class="table-fixed w-full border-collapse">
             <thead>
                 <tr class="border-b border-gray-300">
-                    <th class="hidden md:table-cell w-[5%] py-4 text-left"></th>
-                    <th class="hidden md:table-cell w-[12%] py-4 text-left text-gray-600 font-medium">Code</th>
-                    <th class="w-[80%] md:w-[32%] py-4 text-left text-gray-600 font-medium">Course Name</th>
-                    <th class="hidden md:table-cell w-[12%] py-4 text-left text-gray-600 font-medium">Status</th>
-                    <th class="hidden md:table-cell w-[8%] py-4 text-left text-gray-600 font-medium">Publish</th>
-                    <th class="hidden md:table-cell w-[11%] py-4 text-left text-gray-600 font-medium">Fee</th>
-                    <th class="hidden md:table-cell w-[15%] py-4 text-left text-gray-600 font-medium">Start Date</th>
-                    <th class="hidden md:table-cell w-[15%] py-4 text-left text-gray-600 font-medium">End Date</th>
-                    <th class="w-[10%] md:w-[5%] py-4 text-left text-gray-600 font-medium">More</th>
+                    <!-- Title 手機保留 -->
+                    <th class="w-[82%] md:w-[42%] py-4 text-left text-gray-600 font-medium">Title</th>
+                    <!-- Published 桌面隱藏手機隱藏 -->
+                    <th class="hidden md:table-cell w-[14%] py-4 text-left text-gray-600 font-medium">Published</th>
+                    <!-- created date 桌面隱藏手機隱藏 -->
+                    <th class="hidden md:table-cell w-[22%] py-4 text-left text-gray-600 font-medium">created date</th>
+                    <!-- created by 桌面隱藏手機隱藏 -->
+                    <th class="hidden md:table-cell w-[14%] py-4 text-left text-gray-600 font-medium">created by</th>
+                    <!-- edit 永遠保留 -->
+                    <th class="w-[18%] md:w-[8%] py-4 text-left text-gray-600 font-medium">edit</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="border-b border-gray-200 table-row text-sm">
-                    <td class="hidden md:table-cell py-5"><input type="checkbox" class="row-check w-4 h-4 rounded"></td>
-                    <td class="hidden md:table-cell py-5 align-top">26PG311-02</td>
-                    <td class="py-5 align-top">Little Ones 自理與學前分離預備 Playgroup</td>
-                    <td class="hidden md:table-cell py-5 align-top">
-                        <span class="bg-[#fff3cd] text-gray-700 text-xs px-4 py-0.5 rounded-full">Pending</span>
-                    </td>
-                    <td class="hidden md:table-cell py-5 align-top">Y</td>
-                    <td class="hidden md:table-cell py-5 align-top">$1480</td>
-                    <td class="hidden md:table-cell py-5 align-top">25/04/2026</td>
-                    <td class="hidden md:table-cell py-5 align-top">13/06/2026</td>
-                    <!-- More ** Added more space, it is easy to click ** -->
+                    <td class="py-5 align-top">XXXXXXXXXXXXXXXXXX ...</td>
+                    <td class="hidden md:table-cell py-5 align-top">Yes</td>
+                    <td class="hidden md:table-cell py-5 align-top">2026-01-01 14:00:000</td>
+                    <td class="hidden md:table-cell py-5 align-top">Staff</td>
                     <td class="py-5">
-                        <button class="more-btn text-gray-400 text-xl hover:text-gray-600">
+                        <button class="text-[#527bff] text-xl hover:opacity-80">
                             <div class="px-3">
-                                <i class="fa-solid fa-ellipsis-v"></i>
+                                <i class="fa-solid fa-pen-to-square"></i>
                             </div>
                         </button>
                     </td>
